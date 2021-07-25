@@ -1,0 +1,44 @@
+body {
+    margin: 0px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.round-button {
+    border: none;
+}
+
+.nav-button {
+    height: 100px;
+    background-color: #B2E4DB;
+}
+
+.nav-button:hover {
+    background-color: #D7FDEC;
+}
+
+.hidden {
+    display: none;
+}
