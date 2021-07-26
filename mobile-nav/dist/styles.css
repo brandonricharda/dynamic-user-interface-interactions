@@ -30,13 +30,13 @@ button {
     border: none;
 }
 
-.nav-button {
+.nav-button, #primary-nav-button {
     height: 100px;
-    background-color: #B2E4DB;
+    background-color: #593D3B;
 }
 
-.nav-button:hover {
-    background-color: #D7FDEC;
+.nav-button:hover, #primary-nav-button:hover {
+    background-color: #6F5E53;
 }
 
 .hidden {
