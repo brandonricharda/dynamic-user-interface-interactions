@@ -1,0 +1,40 @@
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.standard-image {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.height-600 {
+    height: 600px;
+}
+
+.width-600 {
+    width: 600px;
+}
+
+.image-nav-button {
+    height: 80px;
+    border: none;
+    color: white;
+    background-color: #324376;
+}
+
+.image-nav-button:hover {
+    background-color: #586BA4;
+}
