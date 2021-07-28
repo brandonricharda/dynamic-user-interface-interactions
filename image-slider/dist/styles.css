@@ -14,12 +14,6 @@
     flex: 1;
 }
 
-.standard-image {
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
-}
-
 .height-600 {
     height: 600px;
 }
@@ -28,11 +22,16 @@
     width: 600px;
 }
 
+.object-fit-cover {
+    object-fit: cover;
+}
+
 .image-nav-button {
     height: 80px;
     border: none;
     color: white;
     background-color: #324376;
+    cursor: pointer;
 }
 
 .image-nav-button:hover {
