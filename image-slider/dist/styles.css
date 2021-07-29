@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.flex-justify-center {
+    justify-content: center;
+}
+
 .flex-1 {
     flex: 1;
 }
@@ -20,6 +24,22 @@
 
 .width-600 {
     width: 600px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.ml-5 {
+    margin-left: 5px;
 }
 
 .object-fit-cover {
@@ -36,4 +56,16 @@
 
 .image-nav-button:hover {
     background-color: #586BA4;
+}
+
+.nav-dot {
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+.active-nav-dot {
+    background-color: grey;
 }

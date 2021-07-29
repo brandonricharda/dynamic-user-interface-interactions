@@ -7,9 +7,16 @@
 
     <body>
         <main class="flex flex-column flex-align-center">
-            <div id="picture-frame">
+            <div id="picture-frame" class="width-600 height-600">
                 <img src="./images/golden-gate.jpeg" class="width-600 height-600 object-fit-cover" id="active-image">
             </div>
+
+            <div id="nav-dot-container" class="width-600 flex flex-justify-center mt-10 mb-10">
+                <button class="nav-dot mr-5 active-nav-dot" id="nav-dot-1"></button>
+                <button class="nav-dot mr-5 ml-5" id="nav-dot-2"></button>
+                <button class="nav-dot ml-5" id="nav-dot-3"></button>
+            </div>
+
             <div id="controls" class="width-600 flex">
                 <button class="flex-1 image-nav-button" id="previous-button">Previous</button>
                 <button class="flex-1 image-nav-button" id="next-button">Next</button>
