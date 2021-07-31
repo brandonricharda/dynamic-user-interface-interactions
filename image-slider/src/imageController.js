@@ -23,6 +23,40 @@ const imageController = (function() {
         });
     }
 
+    let reverseSlide = function() {
+        let src = activeImage.getAttribute("src");
+        let currentKey = findHashKeyByValue(images, src);
+        if (currentKey == 1) {
+            clearNavDots();
+            navDotThree.classList.add("active-nav-dot");
+            activeImage.setAttribute("src", images[imageCount]);
+        } else {
+            clearNavDots();
+            let newKey = parseInt(currentKey) - 1;
+            [navDotOne, navDotTwo, navDotThree][newKey - 1].classList.add("active-nav-dot");
+            activeImage.setAttribute("src", images[newKey]);
+        }
+    }
+
+    let advanceSlide = function() {
+        let src = activeImage.getAttribute("src");
+        let currentKey = findHashKeyByValue(images, src);
+        if (currentKey == imageCount) {
+            clearNavDots();
+            navDotOne.classList.add("active-nav-dot");
+            activeImage.setAttribute("src", images[1]);
+        } else {
+            let newKey = parseInt(currentKey) + 1;
+            clearNavDots();
+            [navDotOne, navDotTwo, navDotThree][newKey - 1].classList.add("active-nav-dot");
+            activeImage.setAttribute("src", images[newKey]);
+        }
+    }
+
+    window.setInterval(function() {
+        advanceSlide();
+    }, 5000);
+
     navDotOne.addEventListener("click", function() {
         clearNavDots();
         activeImage.setAttribute("src", images[1]);
@@ -42,29 +76,11 @@ const imageController = (function() {
     });
 
     previousButton.addEventListener("click", function() {
-        let src = activeImage.getAttribute("src");
-        let currentKey = findHashKeyByValue(images, src);
-        if (currentKey == 1) {
-            activeImage.setAttribute("src", images[imageCount]);
-        } else {
-            let newKey = parseInt(currentKey) - 1;
-            activeImage.setAttribute("src", images[newKey]);
-        }
+        reverseSlide();
     });
 
     nextButton.addEventListener("click", function() {
-        let src = activeImage.getAttribute("src");
-        let currentKey = findHashKeyByValue(images, src);
-        if (currentKey == imageCount) {
-            clearNavDots();
-            navDotOne.classList.add("active-nav-dot");
-            activeImage.setAttribute("src", images[1]);
-        } else {
-            let newKey = parseInt(currentKey) + 1;
-            clearNavDots();
-            [navDotOne, navDotTwo, navDotThree][newKey - 1].classList.add("active-nav-dot");
-            activeImage.setAttribute("src", images[newKey]);
-        }
+        advanceSlide();
     });
 });
 
